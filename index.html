@@ -1,0 +1,116 @@
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!--DESCRIPCIÓN DEL DOCUMENTO:
+- Documento HTML: PÁGINA WEB PARA EL EJERCICIO FINAL DEL CURSO DE DESARROLLO WEB FRONT-END 2022
+- ¿Qué hace? Se incluye el diseño sin formato o formato básico de página web: los elementos que 
+    van a componer la página web. En este caso se requiere de un formulario que contiene varios 
+    campos para crear una cuenta:
+            - Nombre
+            - Correo electrónico
+            - Contraseña
+    Además, hay que añadir un campo para confirmar la contraseña y un botón para enviar el formulario.
+- Autor: Ana Morales-->
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!--DESARROLLO DE LA PÁGINA WEB-->
+<!DOCTYPE HTML> <!--Indica que es un documento de tipo html-->
+<html> <!--Inicia la página web-->
+     <!--Cabecera de la página web(head)-->
+    <head>
+        <!--Título que aparece en la pestaña de la página web-->
+        <title>Actividad final: Desarrollo Front-End</title> 
+        <!--Link al documento de estilo que dará el formato que queremos a la página web-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!--Contenidos de la página web (body)-->
+    <body>
+        <div class="BOX"> <!--Uso div para dividir cada apartado del documento-->
+            <!--CREA EL FORMULARIO (form)-->
+            <form id="formulario" class="formulario" action="">
+                <!--Crea la cabecera para el formulario-->
+                <div class="cabecera-form"> 
+                    <h2>Create account</h2>
+                </div>
+                <!--A continuación voy a crear todos los campos del formulario-->
+
+                <!--CAMPO PARA EL NOMBRE-->
+                <div class="formulario--campo" id="nombre--campo"> <!--así se puede llamar a este elemento mediante su id o class en css y js-->
+                    <label for="nombre" class="formulario_label">Nombre</label> <!--etiqueta del campo--> 
+                    <div class="formulario_campo-input">
+                        <!--Añade un campo "text" donde escribir el nombre-->
+                        <input type="text" id="nombre" class="formulario_input" name="nombre"/> 
+                        <!--Añade los iconos para error y validación: (SI DA ERROR, COMPROBAR EL DIRECTORIO DE LAS IMÁGENES)-->
+                        <img class="success-icon" src="images/success-icon.svg"> <!--añade el icono verde-->
+                        <img class="error-icon" src="images/error-icon.svg"> <!--añade el icono rojo-->
+                    </div>
+                    <!--Añade los mensajes de error-->
+                    <div class="error">Rellene este campo</div> <!--mensaje de error cuando el campo está vacio-->
+                    <div class="error2">No puede contener números</div> <!--Mensaje de error cuando el campo es erróneo-->
+                </div>
+                <!--FIN DE CAMPO NOMBRE-->
+
+                <!--CAMPO PARA EL CORREO ELECTRONICO-->
+                <div class="formulario--campo" id="email--campo">
+                    <label for="email" class="formulario_label">Email</label> 
+                    <div class="formulario_campo-input">
+                        <!--Añade un campo "email" (es un formato específico)-->
+                        <input type="email" id="email" class="formulario_input" name="email"/> 
+                        <!--Añade los iconos para error y validación-->
+                        <img class="success-icon" src="images/success-icon.svg">
+                        <img class="error-icon" src="images/error-icon.svg">
+                    </div>
+                    <!--Añade los mensajes de error-->
+                    <div class="error">Rellene este campo</div>
+                    <div class="error2">Email no válido</div>
+                </div>
+                <!--FIN DE CAMPO EMAIL-->
+                
+                <!--CAMPO PARA LA CONTRASEÑA 1-->
+                <div class="formulario--campo" id="clave1--campo">
+                    <label for="clave1" class="formulario_label">Clave</label> 
+                    <div class="formulario_campo-input">
+                        <!--Añade un campo "email" (es un formato específico)-->
+                        <input type="password" id="clave1" class="formulario_input" name="clave1"/> 
+                        <!--Añade los iconos para error y validación-->
+                        <img class="success-icon" src="images/success-icon.svg">
+                        <img class="error-icon" src="images/error-icon.svg">
+                    </div>
+                    <!--Añade los mensajes de error-->
+                    <div class="error">Rellene este campo</div>
+                    <div class="error2">No debe tener más de 8 caracteres</div>
+                </div>
+                <!--FIN DE CAMPO CLAVE1-->
+
+                <!--CAMPO PARA LA CONTRASEÑA 2 (DEBE COINCIDIR CON LA CONTRASEÑA 1)-->
+                <div class="formulario--campo" id="clave2--campo">
+                    <label for="clave2" class="formulario_label">Confirme su clave</label> 
+                    <div class="formulario_campo-input">
+                        <!--Añade un campo "password" (es un formato específico)-->
+                        <input type="password" id="clave2" class="formulario_input" name="clave2"/> 
+                        <!--Añade los iconos para error y validación-->
+                        <img class="success-icon" src="images/success-icon.svg">
+                        <img class="error-icon" src="images/error-icon.svg">
+                    </div>
+                    <!--Añade los mensajes de error-->
+                    <div class="error">Rellene este campo</div>
+                    <div class="error2">Las contraseñas no coinciden</div>
+                </div>
+                <!--FIN DE CAMPO CLAVE2-->
+
+                <!--CAMPO PARA EL BOTÓN DE ENVIAR-->
+                <div class="formulario--campo" id="enviar--campo">
+                    <!--botón de tipo "submit"-->
+                    <button type="submit" id="enviar">ENVIAR</button>
+                </div>
+                <!--FIN DE CAMPO BOTON DE ENVIO-->
+
+            </form>
+            <!--FIN DEL FORMULARIO-->
+        </div>
+    </body>
+    <!--Añade el enlace al documento de javascript.js que va a procesar los datos-->
+    <script src="index.js"></script> 
+</html>
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- FINAL DE LA PÁGINA WEB -->

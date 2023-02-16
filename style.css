@@ -1,0 +1,120 @@
+/*DESCRIPCIÓN DEL DOCUMENTO:
+- Documento CSS: PÁGINA DE ESTILOS PARA EL EJERCICIO FINAL DEL CURSO DE DESARROLLO WEB FRONT-END 2022
+- ¿Qué hace? Se incluye el formato y los estilos deseados para la visualización de la página web y todos
+    sus elementos. Puntos clave a incluir: 
+            1. Disposición de los elementos de la página web y su estilo.
+            2. Disposición de los elementos del formulario y su estilo.
+            3. Estilo de los elementos cuando el campo es correcto o incorrecto.
+- Autor: Ana Morales*/
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+/* ---- ESTILO DE LA PÁGINA WEB ---- */
+/*Estilo del fondo de la pagina web*/
+html{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilo del cuerpo de la página (letra y color del formulario) */
+body{
+    font-family: Helvetica;
+    background: #242933;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    display: flex;
+}
+/*Estilo de la caja*/
+.BOX{
+    color: #AFBDE5;
+    background: #2F3644;
+    border-radius: 5px;
+    border-color: #AFBDE5;
+    border-width: 5px;
+    width: 400px;
+    max-width: 100%;
+    position: absolute;
+}
+
+/* ---- ESTILO DEL FORMULARIO ---- */
+#formulario{
+    padding: 30px 40px;
+}
+/*Estilo de las cajas para los inputs*/
+input{
+    width: 96%;
+    height: 40px;
+    border-radius: 5px;
+    border-color: rgb(175, 189, 229);
+}
+/*Estilo del botón "ENVIAR"*/
+button{
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #6C63FF;
+    width: 99%;
+    height: 40px;
+    border-radius: 5px;
+    outline: #000000;
+    color: #FFFFFF;
+    font: bold;
+}
+/*Estilo de los iconos*/
+.error-icon,
+.success-icon{
+    position: absolute;
+    right: 0;
+    padding: 14px 60px;
+    opacity: 0; 
+    /*La opacidad se cambiará cuando sea necesario mostrar la imagen, pero "default" será 0*/
+}
+/*Estilo de los mensajes de error*/
+.error,
+.error2{
+    color:#ff0000;
+    font-size:small;
+    margin-top: 5px;
+    display: none;
+    /*"none" hace que no se vean los mensajes de error*/
+}
+
+
+/* ---- ESTILOS PARA LA VALIDACIÓN DEL FORMULARIO ---- */
+/*Cuando el campo es correcto*/
+/*El icono verde aparece, el icono rojo no se muestra*/
+.formulario--campo_correcto .success-icon{
+    opacity: 1;
+}
+/*El borde del recuadro es verde*/
+.formulario--campo_correcto .formulario_input{
+    border-color: #00ff00;
+}
+
+/*Cuando el campo NO es correcto*/
+/*El icono rojo aparece, el icono verde no se muestra*/
+.formulario--campo_incorrecto .error-icon{
+    opacity: 1;
+}
+/*El borde del recuadro es rojo*/
+.formulario--campo_incorrecto .formulario_input{
+    border-color: #ff0000;
+}
+/*Para mostrar los mensajes de error*/
+.error-ac,
+.error2-ac{
+    color:#ff0000;
+    font-size:small;
+    margin-top: 5px;
+    display: none;
+}
+.formulario--campo_incorrecto .error-ac{
+    display: block;
+}
+.formulario--campo_incorrecto .error2-ac{
+    display: block;
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/* ---- FINAL DEL DOCUMENTO DE ESTILOS ---- */
